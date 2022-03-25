@@ -1,0 +1,13 @@
+name: Nightly B2C
+
+on:
+  schedule:
+    - cron: '0 7 * * *'
+
+jobs:
+  build-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Jenkins
+        run: |
+          curl -v -X POST '${{ secrets.JENKINS_URL }}?TEST_AUTOMATION_ENVIRONMENT=neo&TEST_AUTOMATION_TEST_RAIL_RUN_ID=883' --user ${{ secrets.JENKINS_USER }}
