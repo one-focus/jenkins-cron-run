@@ -2,7 +2,7 @@ name: Nightly B2C
 
 on:
   schedule:
-    - cron: '0 7 * * *'
+    - cron: '0 19 * * *'
 
 jobs:
   build-pages:
