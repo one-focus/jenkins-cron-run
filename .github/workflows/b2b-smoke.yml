@@ -2,7 +2,7 @@ name: Smoke B2B
 
 on:
   schedule:
-    - cron: '0 0 * * SUN'
+    - cron: '0 6 * * SUN'
 
 jobs:
   build-pages:
